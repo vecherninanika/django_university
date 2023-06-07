@@ -1,0 +1,37 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<br><br>
+<h1 style="font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">About</h1>
+<style>
+  body {
+    color: white;
+  }
+</style>
+
+<br>
+<p>
+  The University of SUON was founded in 1820.
+  Our uniqueness is that our students not only gain deep knowledge of the subjects they will need in their career, but
+  also have
+  such subjects as English, history and psycology that help them understand the world better and learn to interact with
+  other people.
+  <br>
+  If you are ready to become the most intelligent person in the world, enroll in our university now!
+</p>
+
+<br><br><br>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card" style="width: 18rem; background-color:#96D1CD;">
+      <div class="card-body">
+        <h5 class="card-title">Contacts</h5>
+        <p class="card-text">Here you can find our phone number, email and pages in social media if you have any
+          questions.</p>
+        <a href="{% url 'contacts' %}" class="btn btn-primary">Explore now</a>
+      </div>
+    </div>
+  </div>
+
+  {% endblock %}

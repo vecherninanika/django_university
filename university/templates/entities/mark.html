@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Mark</h5>
+    <p class="card-text">
+
+      {% if mark %}
+    <h4>Student: {{mark.student}}</h4>
+    <h4>Lesson: {{mark.lesson}}</h4>
+    {% if mark.mark %}
+    <h4>Mark: {{ mark.mark }}</h4>
+    {% endif %}
+    {% if mark.presence %}
+    <h4>Presence: {{ mark.presence }}</h4>
+    {% endif %}
+
+    {% else %}
+    <p>Mark not found..</p>
+    {% endif %}
+
+  </div>
+</div>
+{% endblock %}

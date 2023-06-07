@@ -1,0 +1,15 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% if user_data %}
+<ul class="list-group" style="width: 25rem;">
+  <h2>Your profile data:</h2>
+  {% for key, value in user_data.items %}
+  <li class="list-group-item">{{key}}: {{value}}</li>
+  {% endfor %}
+</ul>
+{% else %}
+<p>No client data to show..</p>
+{% endif %}
+
+{% endblock %}

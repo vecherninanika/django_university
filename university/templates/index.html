@@ -1,0 +1,52 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+
+<br><br>
+<h1 style="font-family:georgia,garamond,serif;font-size:50px;font-style:italic;">University of SUON</h1>
+<style>
+  body {
+    color: white;
+  }
+</style>
+
+<br>
+<p>Our university has the following record counts:</p>
+<h4><strong>Faculties:</strong> {{ faculties }}</h4>
+<h4><strong>Groups:</strong> {{ groups }}</h4>
+<h4><strong>Teachers:</strong> {{ teachers }}</h4>
+<h4><strong>Students:</strong> {{ students }}</h4>
+
+<br><br><br>
+<div class="row">
+  <div class="col-sm-4">
+    <div class="card" style="width: 18rem; background-color:#96D1CD;">
+      <div class="card-body">
+        <h5 class="card-title">Teachers</h5>
+        <p class="card-text">Visit this page to get to know our specialists</p>
+        <a href="{% url 'teachers' %}" class="btn btn-primary">Explore now</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card" style="width: 18rem; background-color:#96D1CD;">
+      <div class="card-body">
+        <h5 class="card-title">Faculties</h5>
+        <p class="card-text">Get to know more about the faculties of our university</p>
+        <a href="{% url 'faculties' %}" class="btn btn-primary">Explore now</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    <div class="card" style="width: 18rem; background-color:#96D1CD;">
+      <div class="card-body">
+        <h5 class="card-title">About</h5>
+        <p class="card-text">Get to know more about the faculties of our university</p>
+        <a href="{% url 'about' %}" class="btn btn-primary">Explore now</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% endblock %}

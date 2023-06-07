@@ -1,0 +1,46 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="card" style="width: 50rem;">
+  <div class="card-body">
+    <h5 class="card-title">Lesson</h5>
+    <p class="card-text">
+
+      {% if lesson %}
+    <h5>Date: {{ lesson.day }} {{ lesson.precise_time }}</h5>
+    <h5>Subject: {{ lesson.subject }}</h5>
+    <h5>Teacher: {{ lesson.teacher }}</h5>
+    <h5>Groups:</h5>
+    {% for group in lesson.groups.all %}
+    <li><a>{{ group }}</a></li>
+    {% endfor %}
+    </a></li>
+    <br>
+    <h5>Marks:</h5>
+    {% for mark in marks %}
+    <li><a>{{ mark.student }}:
+        {% if mark.mark %} {{ mark.mark }} {% endif %}
+        {% if mark.presence %} {{ mark.presence }} {% endif %}
+      </a></li>
+    {% endfor %}
+
+    <br>
+
+    {% if form_errors %}
+    <h5>{{ form_errors }}</h5>
+    {% endif %}
+
+    <div class="form-group"></div>
+    <form action="/lesson/?id={{ lesson.id }}" method="POST">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Add mark">
+    </form>
+  </div>
+
+  {% else %}
+  <p>Lesson not found..</p>
+  {% endif %}
+</div>
+</div>
+{% endblock %}

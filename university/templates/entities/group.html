@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="card" style="width: 50rem;">
+  <div class="card-body">
+    <h5 class="card-title">Group</h5>
+    <p class="card-text">
+
+      {% if group %}
+    <h5>Title: {{ group.title }}</h5>
+    <h5>Faculty: {{ group.faculty }}</h5>
+    <h5>Subjects: <br>
+      {% for subject in group.subjects.all %}
+      <li><a>{{ subject }}</a></li>
+      {% endfor %}
+    </h5>
+    {% else %}
+    <p>Group not found..</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

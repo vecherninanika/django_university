@@ -1,0 +1,24 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Teacher</h5>
+    <p class="card-text">
+
+      {% if teacher %}
+
+    <h4>Name: {{ teacher.full_name }}</h4>
+    <h4>Subjects:
+      {% for subject in teacher.subjects.all %}
+      <li><a>{{ subject }}</a></li>
+      {% endfor %}
+    </h4>
+    <h4>Faculty: {{ teacher.faculty }}</h4>
+
+    {% else %}
+    <p>Teacher not found..</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

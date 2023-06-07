@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Faculty</h5>
+    <p class="card-text">
+
+      {% if faculty %}
+
+    <h5>Faculty: {{ faculty.title }}</h5>
+
+    <h5>Description: {{faculty.description}}</h5>
+
+    {% else %}
+    <p>Faculty not found..</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

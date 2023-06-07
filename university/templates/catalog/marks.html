@@ -1,0 +1,31 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="card" style="width: 55rem;">
+  <div class="card-body">
+    <h5 class="card-title">Marks</h5>
+    <p class="card-text">
+      {% if marks_list %}
+    <ul>
+      {% csrf_token %}
+      {% for mark in marks_list %}
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item"><a href="{% url 'mark'%}?id={{mark.id}}">{{ mark.student }}</a></li>
+        <li class="list-group-item"><a href="{% url 'mark'%}?id={{mark.id}}">{{ mark.lesson }}</a></li>
+        {% if mark.mark %}
+        <li class="list-group-item"><a href="{% url 'mark'%}?id={{mark.id}}">{{ mark.mark }}</a></li>
+        {% endif %}
+        {% if mark.presence %}
+        <li class="list-group-item"><a href="{% url 'mark'%}?id={{mark.id}}">{{ mark.presence }}</a></li>
+        {% endif %}
+      </ul>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+    <p>There are no marks for now..</p>
+    {% endif %}
+
+  </div>
+</div>
+{% endblock %}

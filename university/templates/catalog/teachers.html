@@ -1,0 +1,23 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+{% csrf_token %}
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">Teachers</h5>
+    <p class="card-text">
+      {% if teachers_list %}
+    <ul>
+      {% for teacher in teachers_list %}
+      <li>
+        <a href="{% url 'teacher'%}?id={{teacher.id}}">{{ teacher.full_name }}</a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p>There are no teachers for now..</p>
+    {% endif %}</p>
+  </div>
+</div>
+
+{% endblock %}

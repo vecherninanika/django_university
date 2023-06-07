@@ -1,0 +1,17 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="card" style="width: 40rem;">
+  <div class="card-body">
+    <h5 class="card-title">Hometask</h5>
+    <p class="card-text">
+      {% if hometask %}
+    <h4>Lesson: {{hometask.lesson}}</h4>
+    <h4>Task: {{ hometask.task }}</h4>
+
+    {% else %}
+    <p>Hometask not found..</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

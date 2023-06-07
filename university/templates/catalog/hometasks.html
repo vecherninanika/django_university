@@ -1,0 +1,25 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="card" style="width: 60rem;">
+  <div class="card-body">
+    <h5 class="card-title">Hometasks</h5>
+    <p class="card-text">
+
+      {% if hometasks_list %}
+    <ul>
+      {% for hometask in hometasks_list %}
+      {% csrf_token %}
+      <ul class="list-group list-group-horizontal">
+        <li class="list-group-item"><a href="{% url 'hometask'%}?id={{hometask.id}}">{{ hometask.lesson }}</a></li>
+        <li class="list-group-item"><a href="{% url 'hometask'%}?id={{hometask.id}}">{{ hometask.task }}</a></li>
+      </ul>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+    <p>There are no hometasks for now..</p>
+    {% endif %}
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,27 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<div class="container text-center">
+  <div class="card" style="width: 40rem;">
+    <div class="card-body">
+      <h5 class="card-title">Lessons</h5>
+      <p class="card-text">
+        {% if lessons_list %}
+      <ul>
+        {% csrf_token %}
+        {% for lesson in lessons_list %}
+        <ul class="list-group list-group-horizontal">
+          <li class="list-group-item"><a href="{% url 'lesson'%}?id={{lesson.id}}">{{ lesson.day }}</a></li>
+          <li class="list-group-item"><a href="{% url 'lesson'%}?id={{lesson.id}}">{{ lesson.precise_time }}</a></li>
+          <li class="list-group-item"><a href="{% url 'lesson'%}?id={{lesson.id}}">{{ lesson.subject }}</a></li>
+        </ul>
+        {% endfor %}
+      </ul>
+
+      {% else %}
+      <p>There are no lessons for now..</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}
