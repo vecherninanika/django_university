@@ -1,0 +1,132 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-05-16 15:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: university_app/models.py:22
+msgid "created"
+msgstr "создано"
+
+#: university_app/models.py:37
+msgid "modified"
+msgstr "изменено"
+
+#: university_app/models.py:44 university_app/models.py:52
+#: university_app/models.py:59 university_app/models.py:92
+msgid "faculty"
+msgstr "факультет"
+
+#: university_app/models.py:45
+msgid "description"
+msgstr "описание"
+
+#: university_app/models.py:53
+msgid "faculties"
+msgstr "факультеты"
+
+#: university_app/models.py:58 university_app/models.py:68
+#: university_app/models.py:134
+msgid "group"
+msgstr "группа"
+
+#: university_app/models.py:60 university_app/models.py:127
+msgid "lessons"
+msgstr "занятия"
+
+#: university_app/models.py:61 university_app/models.py:84
+#: university_app/models.py:91
+msgid "subjects"
+msgstr "предметы"
+
+#: university_app/models.py:69 university_app/models.py:75
+#: university_app/models.py:110
+msgid "groups"
+msgstr "группы"
+
+#: university_app/models.py:74
+msgid "title"
+msgstr "название"
+
+#: university_app/models.py:76 university_app/models.py:100
+msgid "teachers"
+msgstr "учителя"
+
+#: university_app/models.py:83 university_app/models.py:108
+msgid "subject"
+msgstr "предмет"
+
+#: university_app/models.py:90 university_app/models.py:133
+#: university_app/models.py:195
+msgid "full name"
+msgstr "имя"
+
+#: university_app/models.py:99 university_app/models.py:109
+msgid "teacher"
+msgstr "учитель"
+
+#: university_app/models.py:106
+msgid "day"
+msgstr "дата"
+
+#: university_app/models.py:107
+msgid "precise time"
+msgstr "время"
+
+#: university_app/models.py:126 university_app/models.py:154
+#: university_app/models.py:181
+msgid "lesson"
+msgstr "занятие"
+
+#: university_app/models.py:141 university_app/models.py:153
+msgid "student"
+msgstr "студент"
+
+#: university_app/models.py:142
+msgid "students"
+msgstr "студенты"
+
+#: university_app/models.py:151 university_app/models.py:174
+msgid "mark"
+msgstr "оценка"
+
+#: university_app/models.py:152
+msgid "presence"
+msgstr "присутствие"
+
+#: university_app/models.py:175
+msgid "marks"
+msgstr "оценки"
+
+#: university_app/models.py:180
+msgid "task"
+msgstr "задание"
+
+#: university_app/models.py:188
+msgid "hometask"
+msgstr "домашнее задание"
+
+#: university_app/models.py:189
+msgid "hometasks"
+msgstr "домашние задания"
+
+#: university_app/models.py:202
+msgid "head teacher"
+msgstr "завуч"
+
+#: university_app/models.py:203
+msgid "head teachers"
+msgstr "завучи"
